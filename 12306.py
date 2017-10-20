@@ -1,9 +1,12 @@
 # -*- coding:utf-8 -*-
 import re
 import requests
+
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # 禁用安全请求警告
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+
 
 import json
 import sys,locale
@@ -42,28 +45,36 @@ def get_LeftTicket(date,from_station,to_station):
 	url=("https://kyfw.12306.cn/otn/leftTicket/queryX?leftTicketDTO.train_date=%s&leftTicketDTO.from_station=%s&leftTicketDTO.to_station=%s&purpose_codes=ADULT"%(date,from_station,to_station))
 	print url
 	#response=requests.get(url,headers=headers,verify=False)
-	response=requests.get(url,headers=headers,verify=False)
-	#print response.content.decode('utf-8').encode('gbk')
+	response=requests.get(url,headers=headers,verify=False)#verfy=False,解决证书问题
+	print response.content.decode('utf-8').encode('gbk')
 	r=response.content
 	value=json.loads(r)
 	result=value['data']['result']
 	#title=PrettyTable.Prettytable()
-	title=PrettyTable(["车次","出发时间","到达时间","是否有余票","软卧"])
+	#title=PrettyTable(["车次","出发时间","到达时间","是否有余票","软卧"])
 	#title.field_names=["车次","出发时间","到达时间","是否有余票","软卧"]
 	for x in result:
 	 	#print x
-		# print x.split('|')[3]+'--'+x.split('|')[8]+'--'+x.split('|')[9]+'--'\
-		# +x.split('|')[11]+'--'+x.split('|')[23]
-		title.add_row([x.split('|')[3],x.split('|')[8],x.split('|')[9],x.split('|')[11],x.split('|')[23]])
-	print title
+		print x.split('|')[3]+'--'+x.split('|')[8]+'--'+x.split('|')[9]+'--'\
+		+x.split('|')[11]+'--'+x.split('|')[23]
+		#title.add_row([x.split('|')[3],x.split('|')[8],x.split('|')[9],x.split('|')[11],x.split('|')[23]])
+	#print title
 	#print result[0]
 
-#解决cmd显示中文乱码问题
-StartDate=raw_input(unicode('请输入出发日期:','utf-8').encode('gbk'))
+# #解决cmd显示中文乱码问题
+# StartDate=raw_input(unicode('请输入出发日期:','utf-8').encode('gbk'))
+# datetime=StartDate.decode('gbk').encode('utf-8')
+# Fromstation_name=raw_input(unicode('请输入始发站：','utf-8').encode('gbk'))
+# #把输入的内容编码转换，否则匹配不出来对应的中文
+# from_station=get_Station(Fromstation_name.decode('gbk').encode('utf-8'))
+# Tostation_name=raw_input(unicode('请输入目的地车站：','utf-8').encode('gbk'))
+# to_station=get_Station(Tostation_name.decode('gbk').encode('utf-8'))
+# get_LeftTicket(datetime,from_station,to_station)
+
+StartDate=raw_input('请输入出发日期：')
 datetime=StartDate.decode('gbk').encode('utf-8')
-Fromstation_name=raw_input(unicode('请输入始发站：','utf-8').encode('gbk'))
-#把输入的内容编码转换，否则匹配不出来对应的中文
-from_station=get_Station(Fromstation_name.decode('gbk').encode('utf-8'))
-Tostation_name=raw_input(unicode('请输入目的地车站：','utf-8').encode('gbk'))
-to_station=get_Station(Tostation_name.decode('gbk').encode('utf-8'))
+FromStation_name=raw_input('请输入始发站：')
+from_station=get_Station(FromStation_name)
+ToStation_name=raw_input('请输入目的地站：')
+to_station=get_Station(ToStation_name)
 get_LeftTicket(datetime,from_station,to_station)
