@@ -1,0 +1,13 @@
+E:\Melody\LuckyDraw\LuckyDraw\bin\Debug\LuckyDraw.exe.config
+E:\Melody\LuckyDraw\LuckyDraw\bin\Debug\LuckyDraw.exe
+E:\Melody\LuckyDraw\LuckyDraw\bin\Debug\LuckyDraw.pdb
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.csprojResolveAssemblyReference.cache
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.Form1.resources
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.Properties.Resources.resources
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.FormMain.resources
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.csproj.GenerateResource.Cache
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.exe
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.pdb
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.AwardsInfoAdd.resources
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.SelectInfo.resources
+E:\Melody\LuckyDraw\LuckyDraw\obj\Debug\LuckyDraw.Lucky7.resources

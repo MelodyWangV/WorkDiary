@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InfoList>
+  <AwardsInfo Index="1">
+    <AwardsName>特等奖</AwardsName>
+    <AwardsNum>1</AwardsNum>
+    <SingleNum>1</SingleNum>
+  </AwardsInfo>
+  <AwardsInfo Index="2">
+    <AwardsName>一等奖</AwardsName>
+    <AwardsNum>1</AwardsNum>
+    <SingleNum>1</SingleNum>
+  </AwardsInfo>
+  <AwardsInfo Index="3">
+    <AwardsName>二等奖</AwardsName>
+    <AwardsNum>2</AwardsNum>
+    <SingleNum>2</SingleNum>
+  </AwardsInfo>
+  <AwardsInfo Index="4">
+    <AwardsName>三等奖</AwardsName>
+    <AwardsNum>3</AwardsNum>
+    <SingleNum>3</SingleNum>
+  </AwardsInfo>
+  <AwardsInfo Index="5">
+    <AwardsName>优秀奖</AwardsName>
+    <AwardsNum>10</AwardsNum>
+    <SingleNum>5</SingleNum>
+  </AwardsInfo>
+</InfoList>
